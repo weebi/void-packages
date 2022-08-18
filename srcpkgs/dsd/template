@@ -1,0 +1,17 @@
+# Template file for 'dsd'
+pkgname=dsd
+version=1.7.0
+revision=1
+archs="x86_64 x86_64-musl"
+wrksrc=dsd-59423fa46be8b41ef0bd2f3d2b45590600be29f0
+build_style=cmake
+hostmakedepends="pkg-config make cmake"
+makedepends="cmake mbelib libsndfile-devel it++ portaudio-devel fftw-devel lapack-devel"
+depends="mbelib it++ libsndfile portaudio"
+short_desc="Digital speech decoder for several digital voice formats."
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="ISC"
+homepage="https://github.com/szechyjs/dsd"
+changelog="https://github.com/szechyjs/dsd/blob/master/CHANGELOG"
+distfiles="https://github.com/szechyjs/dsd/archive/59423fa46be8b41ef0bd2f3d2b45590600be29f0.zip"
+checksum=6a699c9673dd3124a6ceb34904ef45aef561b481d1ff924d1d29471d142a2fbc

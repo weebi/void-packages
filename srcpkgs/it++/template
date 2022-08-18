@@ -1,0 +1,18 @@
+# Template file for 'it++'
+pkgname=it++
+version=4.3.1
+revision=1
+archs="x86_64 x86_64-musl"
+wrksrc=itpp-${version}
+build_style=cmake
+configure_args="-DCMAKE_BUILD_TYPE=Release"
+hostmakedepends="m4 automake gcc cmake make pkg-config"
+makedepends="gcc blas-devel lapack-devel fftw-devel"
+depends=""
+short_desc="Mathematical and signal processing library for C++."
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="GPL"
+homepage="https://sourceforge.net/projects/itpp/"
+changelog="https://sourceforge.net/projects/itpp/files/itpp/${version}/"
+distfiles="${SOURCEFORGE_SITE}/itpp/${version}/itpp-${version}.tar.bz2"
+checksum=50717621c5dfb5ed22f8492f8af32b17776e6e06641dfe3a3a8f82c8d353b877

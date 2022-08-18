@@ -1,0 +1,17 @@
+# Template file for 'mbelib'
+pkgname=mbelib
+version=1.3.0
+revision=1
+archs="x86_64 x86_64-musl"
+wrksrc=mbelib-9a04ed5c78176a9965f3d43f7aa1b1f5330e771f
+build_style=cmake
+hostmakedepends="make cmake"
+makedepends=""
+depends=""
+short_desc="P25 Phase 1 and ProVoice vocoder"
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="ISC"
+homepage="https://github.com/szechyjs/mbelib"
+changelog="https://github.com/szechyjs/mbelib/blob/master/CHANGELOG"
+distfiles="https://github.com/szechyjs/mbelib/archive/9a04ed5c78176a9965f3d43f7aa1b1f5330e771f.zip"
+checksum=e8f9fedd3527629acdcb6b76f859e834da446a979e6db354b7bbd47b28e9ed6b
