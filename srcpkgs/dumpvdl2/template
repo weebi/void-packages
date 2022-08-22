@@ -1,0 +1,17 @@
+# Template file for 'dumpvdl2'
+pkgname=dumpvdl2
+version=2.2.0
+revision=1
+archs="x86_64 x86_64-musl"
+build_style=cmake
+#configure_args=""
+hostmakedepends="gcc make cmake pkg-config"
+makedepends="libglib-devel librtlsdr-devel SoapySDR-devel libacars sqlite-devel"
+depends="librtlsdr SoapySDR sqlite"
+short_desc="VDL Mode 2 message decoder and protocol analyzer"
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="GPL-3.0"
+homepage="https://github.com/szpajder/dumpvdl2"
+changelog="https://github.com/szpajder/dumpvdl2/releases/tag/v${version}"
+distfiles="https://github.com/szpajder/dumpvdl2/archive/refs/tags/v${version}.tar.gz"
+checksum=dbf9f2d2947517efbf32ee21bbf688a86b3cf46cd66bfe9b09fa162194173f19
