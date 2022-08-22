@@ -1,0 +1,19 @@
+# Template file for 'airspyhf'
+pkgname=airspyhf
+version=1.6.8
+revision=1
+archs="x86_64 x86_64-musl"
+wrksrc="airspyhf-master"
+build_style=cmake
+configure_args="-DINSTALL_UDEV_RULES=ON"
+#conf_files=""
+hostmakedepends="cmake make pkg-config"
+makedepends="libusb-devel"
+depends="libusb"
+short_desc="Airspy HF+ tools"
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="BSD-3"
+homepage="https://github.com/airspy/airpsyhf"
+#changelog=""
+distfiles="https://github.com/airspy/airspyhf/archive/refs/heads/master.zip"
+checksum=4bd794a29bc0e1347105e0431fc626b56db940748dc63a75b92e2a1ecec090cc

@@ -1,0 +1,11 @@
+--- a/tools/CMakeLists.txt	2022-07-28 08:39:15.000000000 +0300
++++ b/tools/CMakeLists.txt	2022-08-23 02:11:56.376486031 +0300
+@@ -72,7 +72,7 @@
+ if (INSTALL_UDEV_RULES)
+     install (
+         FILES 52-airspyhf.rules
+-        DESTINATION "/etc/udev/rules.d"
++        DESTINATION "/usr/lib/udev/rules.d"
+         COMPONENT "udev"
+         )
+ else (INSTALL_UDEV_RULES)
