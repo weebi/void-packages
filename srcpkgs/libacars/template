@@ -1,0 +1,17 @@
+# Template file for 'libacars'
+pkgname=libacars
+version=2.1.4
+revision=1
+archs="x86_64 x86_64-musl"
+build_style=cmake
+#configure_args=""
+hostmakedepends="cmake make gcc"
+makedepends="zlib-devel libxml2-devel"
+depends="zlib libxml2"
+short_desc="Library for decoding ACARS messages"
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="MIT"
+homepage="https://github.com/szpajder/libacars"
+changelog="https://github.com/szpajder/libacars/blob/master/CHANGELOG.md"
+distfiles="https://github.com/szpajder/libacars/archive/refs/tags/v${version}.tar.gz"
+checksum=1a4589a919e54e23046583c15f5a46f850b9dd2f25a6f57829d05e1b4da88b70
