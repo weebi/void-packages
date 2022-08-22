@@ -1,0 +1,17 @@
+# Template file for 'dsdcc'
+pkgname=dsdcc
+version=1.9.3
+revision=1
+archs="x86_64 x86_64-musl"
+build_style=cmake
+CFLAGS+="-DUSE_MBELIB=ON"
+hostmakedepends="pkg-config make cmake"
+makedepends="cmake mbelib"
+depends="mbelib"
+short_desc="Digital Speech Decoder (DSD) rewritten as a C++ library"
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="GPLv3"
+homepage="https://github.com/f4exb/dsdcc"
+changelog="https://github.com/f4exb/dsdcc/blob/master/CHANGELOG"
+distfiles="https://github.com/f4exb/dsdcc/archive/refs/tags/v1.9.3.tar.gz"
+checksum=c87f7db419c12ca43f2af58feec4efcb4a8164b32e51474ac1b797338ce5695a
