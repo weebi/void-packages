@@ -1,0 +1,17 @@
+# Template file for 'SoapyAirspyHF'
+pkgname=SoapyAirspyHF
+version=0.2.0
+revision=1
+archs="x86_64 x86_64-musl"
+build_style=cmake
+wrksrc="SoapyAirspyHF-master"
+hostmakedepends="cmake make pkg-config gcc"
+makedepends="SoapySDR-devel airspyhf"
+depends="SoapySDR airspyhf"
+short_desc="SoapySDR plugin to support the Airspy HF+"
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="MIT"
+homepage="https://github.com/pothosware/SoapyAirspyHF/"
+changelog="https://github.com/pothosware/SoapyAirspyHF/blob/master/Changelog.txt"
+distfiles="https://github.com/pothosware/SoapyAirspyHF/archive/refs/heads/master.zip"
+checksum=387b49ad610c943dd8cf57b63b6680f51edd931e5e546c49d01008f3cfaf8463
