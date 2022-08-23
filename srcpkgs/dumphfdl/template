@@ -1,0 +1,16 @@
+# Template file for 'dumphfdl'
+pkgname=dumphfdl
+version=1.3.0
+revision=1
+archs="x86_64 x86_64-musl"
+build_style=cmake
+hostmakedepends="gcc make cmake pkg-config"
+makedepends="libacars glib-devel libconfig++-devel libconfig-devel liquid-dsp-devel fftw-devel SoapySDR-devel sqlite-devel"
+depends="libacars SoapySDR sqlite"
+short_desc="Multichannel HFDL decoder"
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="GPL-3.0"
+homepage="https://github.com/szpajder/dumphfdl"
+changelog="https://github.com/szpajder/dumphfdl/blob/master/CHANGELOG.md"
+distfiles="https://github.com/szpajder/dumphfdl/archive/refs/tags/v${version}.tar.gz"
+checksum=6f91fbcb38b7288abf1d98df24f0d57cee050606391194ffaa5ba6fb08b0d9b1
