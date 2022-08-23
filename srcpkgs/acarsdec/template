@@ -1,0 +1,18 @@
+# Template file for 'acarsdec'
+pkgname=acarsdec
+version=3.7
+revision=1
+archs="x86_64 x86_64-musl"
+wrksrc="acarsdec-acarsdec-${version}"
+build_style=cmake
+configure_args="-Drtl=ON"
+hostmakedepends="gcc cmake make pkg-config"
+makedepends="libusb-devel librtlsdr-devel libacars"
+depends="librtlsdr libacars"
+short_desc="Decoder for ACARS to use with SDRs"
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="GPL-2.0"
+homepage="https://github.com/TLeconte/acarsdec"
+changelog="https://github.com/TLeconte/acarsdec/releases/tag/acarsdec-${version}"
+distfiles="https://github.com/TLeconte/acarsdec/archive/refs/tags/acarsdec-${version}.tar.gz"
+checksum=1cb8cab03642bfdfcefb7b003f292cfac0f11051ff07666e714bbb4905717005
