@@ -2,8 +2,12 @@ masterdir*
 hostdir*
 masterdir*/
 hostdir*/
+common
+etc
 etc/conf
 etc/conf.*
 etc/virtual
 etc/xbps.d/custom
 .xbps-checkvers*.plist
+temp
+xbps-src
