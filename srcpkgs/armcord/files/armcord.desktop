@@ -1,0 +1,12 @@
+# This file has been "borrowed" from the Arch Linux AUR package "armcord-git" by Vendicated, same as the "armcord-launcher.sh" script
+# https://aur.archlinux.org/cgit/aur.git/tree/armcord.desktop?h=armcord-git
+[Desktop Entry]
+Name=ArmCord
+Comment=ArmCord is a custom client designed to enhance your Discord experience while keeping everything lightweight
+GenericName=Internet Messenger
+Type=Application
+Exec=/usr/bin/armcord
+Icon=armcord
+Categories=Network;InstantMessaging;
+StartupWMClass=armcord
+Keywords=discord;armcord;vencord;shelter;electron;

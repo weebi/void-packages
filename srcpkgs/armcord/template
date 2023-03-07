@@ -1,0 +1,35 @@
+# Template file for 'armcord'
+pkgname=armcord
+version=3.1.6
+revision=1
+#archs="i686 x86_64"
+wrksrc="armcord-${version}"
+build_style=fetch
+hostmakedepends="git nodejs tar"
+makedepends=""
+depends="electron19"
+short_desc="A lightweight Discord client designed with built-in mod support"
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="OSL-3.0"
+homepage="https://github.com/ArmCord/ArmCord"
+#changelog=""
+distfiles="https://github.com/ArmCord/ArmCord/archive/refs/tags/v${version}.tar.gz"
+checksum=6a515bf46fd786d1b31af65619dd8e20f51e03e9536c54fc2ca2e5621c044318
+
+do_install() {
+  # Extract fetched distfiles (Why does this have to be done manually?)
+  tar xf "v${version}.tar.gz"
+  cd "ArmCord-${version}"
+
+  # Build the app using npm/npx
+  npx --yes pnpm install --frozen-lockfile --ignore-scripts
+  npm run packageQuick
+
+  # And install the necessary files into the final package
+  vinstall "dist/linux-unpacked/resources/app.asar" "644" "/usr/share/armcord/"
+  vbin "${FILESDIR}/armcord-launcher.sh" "armcord"
+
+  vinstall "${FILESDIR}/armcord.desktop" "644" "/usr/share/applications/"
+  vinstall "build/icon.png" "644" "/usr/share/pixmaps/" "armcord.png"
+  vlicense "LICENSE"
+}
