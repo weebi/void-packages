@@ -1,0 +1,32 @@
+# Template file for 'fx-cast'
+pkgname=fx-cast
+version=0.3.0
+revision=1
+#archs="x86_64 x86_64-musl"
+build_style=meta
+hostmakedepends="wget bsdtar findutils"
+makedepends=""
+depends="firefox"
+short_desc="Chromecast Web Sender SDK implementation for Firefox"
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/hensm/fx_cast"
+nopie=true
+
+do_install() {
+  # Fetch both distfiles
+  wget "https://github.com/hensm/fx_cast/releases/download/v${version}/fx_cast_bridge-${version}-x64.deb"
+  wget "https://github.com/hensm/fx_cast/releases/download/v${version}/fx_cast-${version}.xpi"
+  wget "https://github.com/hensm/fx_cast/raw/master/LICENSE"
+
+  # Extract fx_cast_bridge-vX.X.X-x64.deb
+  echo ":/: $DESTDIR :/: $PKGDESTDIR :/:"
+  bsdtar -xvf "fx_cast_bridge-${version}-x64.deb"
+  bsdtar -xvf "data.tar.xz"
+
+  # Install files to DESTDIR
+  vinstall "opt/fx_cast/dns_sd_bindings.node" 644 "/opt/fx_cast/"
+  vinstall "opt/fx_cast/fx_cast_bridge" 644 "/opt/fx_cast/"
+  vinstall "usr/lib/mozilla/native-messaging-hosts/fx_cast_bridge.json" 644 "/usr/lib/mozilla/native-messaging-hosts/"
+  vlicense "LICENSE"
+}
