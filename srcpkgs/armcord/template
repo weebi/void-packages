@@ -1,20 +1,20 @@
 # Template file for 'armcord'
 pkgname=armcord
-version=3.1.6
+version=3.2.0
 revision=1
 #archs="i686 x86_64"
 wrksrc="armcord-${version}"
 build_style=fetch
 hostmakedepends="git nodejs tar"
 makedepends=""
-depends="electron19"
+depends="electron24"
 short_desc="A lightweight Discord client designed with built-in mod support"
 maintainer="weebi <weebi@national.shitposting.agency>"
 license="OSL-3.0"
 homepage="https://github.com/ArmCord/ArmCord"
 #changelog=""
 distfiles="https://github.com/ArmCord/ArmCord/archive/refs/tags/v${version}.tar.gz"
-checksum=6a515bf46fd786d1b31af65619dd8e20f51e03e9536c54fc2ca2e5621c044318
+checksum=8a33025cea34f23855253e02e6a8cf80027afc589c9bc3a29a159027516f73db
 
 do_install() {
   # Extract fetched distfiles (Why does this have to be done manually?)

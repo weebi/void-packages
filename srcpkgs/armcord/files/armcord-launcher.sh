@@ -8,7 +8,7 @@
 # https://aur.archlinux.org/cgit/aur.git/tree/armcord-launcher.sh?h=armcord-git
 #
 
-electron="/usr/bin/electron19"
+electron="/usr/bin/electron24"
 
 CONFIG="${XDG_CONFIG_HOME:-~/.config}"
 FLAGS="${CONFIG}/armcord-flags.conf"
