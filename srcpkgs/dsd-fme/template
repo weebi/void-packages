@@ -1,8 +1,8 @@
 # Template file for 'dsd-fme'
 pkgname=dsd-fme
 version=2.1
-revision=1
-wrksrc="dsd-fme-${version}beta"
+revision=2
+wrksrc="dsd-fme-${version}b"
 build_style=cmake
 hostmakedepends="make cmake git gcc"
 makedepends="libpulseaudio pulseaudio-devel fftw-devel lapack librtlsdr-devel librtlsdr libusb-devel libusb ncurses ncurses-devel mbelib it++ libsndfile-devel"
@@ -11,8 +11,8 @@ short_desc="Digital Speech Decoder - Florida Man Edition"
 maintainer="weebi <weebi@national.shitposting.agency>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/lwvmobile/dsd-fme"
-distfiles="https://github.com/lwvmobile/dsd-fme/archive/refs/tags/v${version}beta.tar.gz"
-checksum=e62e66d0691db12fc1198051888478f5c2bf32f4b46f862a4d0d00f6a6873caa
+distfiles="https://github.com/lwvmobile/dsd-fme/archive/refs/tags/${version}b.tar.gz"
+checksum=dca38d1cf3d1a55e9c72366f859c024d7d8c939259ccf048da02f9c0b5f1f2d7
 
 do_install() {
   vbin build/dsd-fme
