@@ -1,0 +1,23 @@
+# Template file for 'dsd-fme'
+pkgname=dsd-fme
+version=2.1
+revision=1
+wrksrc="dsd-fme-${version}beta"
+build_style=cmake
+hostmakedepends="make cmake git gcc"
+makedepends="libpulseaudio pulseaudio-devel fftw-devel lapack librtlsdr-devel librtlsdr libusb-devel libusb ncurses ncurses-devel mbelib it++ libsndfile-devel"
+depends="libpulseaudio rtl-sdr librtlsdr libusb ncurses mbelib it++ libsndfile"
+short_desc="Digital Speech Decoder - Florida Man Edition"
+maintainer="weebi <weebi@national.shitposting.agency>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/lwvmobile/dsd-fme"
+distfiles="https://github.com/lwvmobile/dsd-fme/archive/refs/tags/v${version}beta.tar.gz"
+checksum=e62e66d0691db12fc1198051888478f5c2bf32f4b46f862a4d0d00f6a6873caa
+
+do_install() {
+  vbin build/dsd-fme
+
+  vinstall "tone8.wav" 644 "/usr/share/"
+  vinstall "tone24.wav" 644 "/usr/share/"
+  vinstall "tone48.wav" 644 "/usr/share/"
+}
