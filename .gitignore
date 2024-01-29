@@ -11,3 +11,4 @@ etc/xbps.d/custom
 .xbps-checkvers*.plist
 temp
 xbps-src
+srcpkgs/xbps-triggers/
