@@ -1,6 +1,6 @@
 # Template file for 'armcord'
 pkgname=armcord
-version=3.2.5
+version=3.2.6
 revision=1
 #archs="i686 x86_64"
 wrksrc="armcord-${version}"
@@ -14,7 +14,7 @@ license="OSL-3.0"
 homepage="https://github.com/ArmCord/ArmCord"
 #changelog=""
 distfiles="https://github.com/ArmCord/ArmCord/archive/refs/tags/v${version}.tar.gz"
-checksum=355bf4909c1b8c4e6f05d219298fbc15c97ea4e7cbbf329d79d29e5790a3bdd8
+checksum=57b0696f443287e8aa8e2bd03ee8043a2305f13c3ea6e538840739494131fc6a
 
 do_install() {
   # Extract fetched distfiles (Why does this have to be done manually?)
