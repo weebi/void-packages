@@ -1,6 +1,6 @@
 # Template file for 'armcord'
 pkgname=armcord
-version=3.2.6
+version=3.2.7
 revision=1
 #archs="i686 x86_64"
 wrksrc="armcord-${version}"
@@ -14,7 +14,7 @@ license="OSL-3.0"
 homepage="https://github.com/ArmCord/ArmCord"
 #changelog=""
 distfiles="https://github.com/ArmCord/ArmCord/archive/refs/tags/v${version}.tar.gz"
-checksum=57b0696f443287e8aa8e2bd03ee8043a2305f13c3ea6e538840739494131fc6a
+checksum=a67d20fa66c9f1fcd9bc54e4225174195269cb1f9ee554374bf96e9828772190
 
 do_install() {
   # Extract fetched distfiles (Why does this have to be done manually?)
@@ -22,6 +22,7 @@ do_install() {
   cd "ArmCord-${version}"
 
   # Build the app using npm/npx
+  export COREPACK_ENABLE_STRICT=0 # Skip mismatching package manager version check
   npx --yes pnpm install --frozen-lockfile --ignore-scripts
   npm run packageQuick
 
